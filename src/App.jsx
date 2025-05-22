@@ -2,9 +2,9 @@
 import React from 'react';
 import './App.scss';
 
-import usersFromServer from './api/users';
-import categoriesFromServer from './api/categories';
-import productsFromServer from './api/products';
+// import usersFromServer from './api/users';
+// import categoriesFromServer from './api/categories';
+// import productsFromServer from './api/products';
 
 // const products = productsFromServer.map((product) => {
 //   const category = null; // find by product.categoryId
@@ -13,14 +13,15 @@ import productsFromServer from './api/products';
 //   return null;
 // });
 
-const getUser = (id) => usersFromServer.find(user => user.id === id)
-const getCategory = (id) => categoriesFromServer.find(categorie => categorie.id === id);
+// const getUser = id => usersFromServer.find(user => user.id === id);
+// const getCategory = id =>
+//   categoriesFromServer.find(categorie => categorie.id === id);
 
-const fullProducts = productsFromServer.map(product => ({
-  ...product,
-  user: getUser(product.ownerId),
-  category: getCategory(product.categoryId),
-}));
+// const fullProducts = productsFromServer.map(product => ({
+//   ...product,
+//   user: getUser(product.ownerId),
+//   category: getCategory(product.categoryId),
+// }));
 
 export const App = () => (
   <div className="section">
